@@ -21,6 +21,7 @@ deliberate. Wait for it to hurt, then fix it.
 
 ```
 make local-install
+make local-db-init
 make local-run
 ```
 

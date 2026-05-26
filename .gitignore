@@ -30,6 +30,7 @@ htmlcov/
 # ---------- Flask ----------
 instance/
 *.log
+*.db
 
 # ---------- Environment / secrets ----------
 .env
