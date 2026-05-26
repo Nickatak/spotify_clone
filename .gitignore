@@ -1,0 +1,53 @@
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+env/
+venv/
+.venv/
+ENV/
+
+# Packaging / build artifacts
+*.egg-info/
+*.egg
+build/
+dist/
+pip-wheel-metadata/
+
+# Test / coverage
+.pytest_cache/
+.tox/
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# ---------- Flask ----------
+instance/
+*.log
+
+# ---------- Environment / secrets ----------
+.env
+.env.*
+!.env.example
+
+# ---------- OS ----------
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ---------- Editors ----------
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# ---------- Claude Code ----------
+.claude/
