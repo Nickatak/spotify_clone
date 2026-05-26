@@ -3,6 +3,7 @@
         local-install local-freeze \
         local-run \
         local-lint \
+        local-test \
         local-clean
 
 PYTHON     := ./venv/bin/python
@@ -25,6 +26,9 @@ local-run:  ## Run the Flask dev server on localhost:5000
 
 local-lint:  ## Run pre-commit hooks against all tracked files
 	$(PRECOMMIT) run --all-files
+
+local-test:  ## Run pytest test suite
+	$(PYTHON) -m pytest
 
 local-clean:  ## Remove __pycache__ dirs
 	find . -type d -name __pycache__ -not -path './venv/*' -exec rm -rf {} +
