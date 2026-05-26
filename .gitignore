@@ -28,9 +28,9 @@ htmlcov/
 .ruff_cache/
 
 # ---------- Flask ----------
-instance/
+instance/*
+!instance/spotify.db
 *.log
-*.db
 
 # ---------- Environment / secrets ----------
 .env
