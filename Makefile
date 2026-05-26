@@ -1,6 +1,7 @@
 .DEFAULT_GOAL := help
 .PHONY: help \
         local-install local-freeze \
+        local-db-init \
         local-run \
         local-lint \
         local-test \
@@ -20,6 +21,9 @@ local-install:  ## Create venv (if missing), install runtime + dev deps, install
 
 local-freeze:  ## Write current venv package versions to requirements.txt
 	$(PIP) freeze > requirements.txt
+
+local-db-init:  ## Create the SQLite database file and tables
+	$(PYTHON) -m flask --app app init-db
 
 local-run:  ## Run the Flask dev server on localhost:5000
 	$(PYTHON) app.py
