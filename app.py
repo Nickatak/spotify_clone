@@ -16,15 +16,18 @@ class User(db.Model):
 def index():
     return render_template("index.html")
 
+
 @app.route("/styles.css")
 def stylesheet():
     return send_file("styles.css", mimetype="text/css")
+
 
 @app.route("/register")
 def register():
     return render_template("register.html")
 
-@app.route("/create_user", methods = ["POST"])
+
+@app.route("/create_user", methods=["POST"])
 def create_user():
     print(request.form["uname"])
     print(request.form["pwrd"])
