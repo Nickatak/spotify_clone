@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, send_file, request
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
@@ -15,6 +15,20 @@ class User(db.Model):
 @app.route("/")
 def index():
     return render_template("index.html")
+
+@app.route("/styles.css")
+def stylesheet():
+    return send_file("styles.css", mimetype="text/css")
+
+@app.route("/register")
+def register():
+    return render_template("register.html")
+
+@app.route("/create_user", methods = ["POST"])
+def create_user():
+    print(request.form["uname"])
+    print(request.form["pwrd"])
+    return render_template("register.html")
 
 
 @app.cli.command("init-db")
