@@ -1,0 +1,66 @@
+.register-page {
+    background: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.register-heading {
+    font-size: 50px;
+}
+
+.register-form {
+    color: whitesmoke;
+    background-color: black;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 15px 15px 30px rgb(255, 0, 0);
+    max-width: 450px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.register-label {
+    width: 100%;
+    font-size: 20px;
+}
+
+.register-input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+    font-size: 15px;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+}
+
+.register-input:focus {
+    outline: none;
+    border-color: rgb(167, 0, 0);
+}
+
+.register-button {
+    background-color: rgb(217, 62, 62);
+    transition: background-color 0.5s ease;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 15px;
+    max-width: max-content;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+.register-button:hover {
+    background-color: rgb(130, 0, 0);
+}
